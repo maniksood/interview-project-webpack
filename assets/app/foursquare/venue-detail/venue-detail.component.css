@@ -1,0 +1,15 @@
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-holder {
+  padding: 2px; /*for white border around images*/
+
+}
+
+.image-holder img {
+  /*height: 100%;*/
+  padding: 5px;
+
+}

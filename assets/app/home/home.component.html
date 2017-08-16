@@ -1,0 +1,17 @@
+<br><br><br>
+
+<div class="container">
+  <app-city-input></app-city-input>
+  <hr>
+
+  <agm-map [latitude]="lat" [longitude]="lng" *ngIf=cityIsSelected>
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
+  <!--<ng-mapbox></ng-mapbox>-->
+  <br>
+  <app-modules-list *ngIf=cityIsSelected></app-modules-list>
+
+</div>
+
+

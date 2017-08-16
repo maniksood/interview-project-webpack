@@ -1,0 +1,37 @@
+<!--Panel-->
+<div class="card">
+  <h3 class="card-header primary-color white-text">{{venue.name}}</h3>
+  <div class="card-body">
+    <div class="container">
+      <p class="card-text">{{venue.description}}</p>
+    </div>
+
+    <hr>
+
+   <div class="container">
+     <p><i class="fa fa-phone" aria-hidden="true" style="color: #007bff"></i> {{venue.contact.formattedPhone}}</p>
+     <p><i class="fa fa-map-marker" aria-hidden="true" style="color: #007bff"></i> {{venue.location.address}}, {{venue.location.crossStreet}}</p>
+     <p><i class="fa fa-star" aria-hidden="true" style="color: #007bff"></i> {{venue.rating}}</p></div>
+
+    <hr>
+
+    <a href="https://www.google.co.in/maps/search/{{venue.location.lat}},{{venue.location.lng}}" class="btn btn-primary" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> Get Directions</a>
+  </div>
+</div>
+
+<!--Panel End-->
+
+
+<!--Images-->
+<hr>
+<div class="images-wrapper">
+  <div class="image-holder" *ngFor="let image of venue.photos.groups[0].items;  let i=index" >
+    <img src="{{image.prefix}}{{image.width}}x{{image.height}}{{image.suffix}}" width="300" height="300">
+  </div>
+</div>
+<!--Images End-->
+
+
+
+
+
